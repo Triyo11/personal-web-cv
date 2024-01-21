@@ -29,7 +29,7 @@ const ProjectsCard = ({ image, title, desc, role, date, techs, view, link }) => 
           </ul>
           </span>
         </p>
-        <NavLink to={link} className="p-2 mt-2 bg-orange-500 text-white max-w-max rounded-lg">Visit Website</NavLink>
+        <NavLink to={link} target={"_blank"} className="p-2 mt-2 bg-orange-500 text-white max-w-max rounded-lg">Visit Website</NavLink>
       </div>
     </div>
   );
