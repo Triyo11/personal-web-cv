@@ -21,15 +21,15 @@ const Projects = () => {
   return (
     <div className="flex flex-col w-full h-screen font-asap no-select">
       <Navbar />
-      <div className="flex px-20 pt-[5.7rem] gap-5 justify-start">
+      {/* <div className="flex px-20 md:pt-[5.7rem] pt-[12rem] gap-5 justify-start">
         <NavLink
           to={"/"}
           className="hover:text-orange-500 transition duration-500"
         >
           <CaretCircleLeft size={40} weight="fill" />
         </NavLink>
-      </div>
-      <div className="flex justify-center text-3xl font-semibold text-gray-700 pb-10">
+      </div> */}
+      <div className="flex justify-center md:text-3xl text-xl md:pt-[5.7rem] pt-[14rem] font-semibold text-gray-700 md:pb-10 pb-5">
         My Last Projects
       </div>
       <div className="flex flex-col gap-5 pb-10">
@@ -37,7 +37,7 @@ const Projects = () => {
           image={bookoe}
           title={"'Bookoe' - Book App"}
           desc={
-            "Officia aliquip nisi quis proident deserunt in et in. Ea aliquip minim fugiat magna magna eu consequat fugiat. Do do Lorem labore irure est duis consectetur adipisicing fugiat nisi cillum velit ex occaecat. Aliquip non Lorem ut tempor nisi nisi veniam cillum officia aute nisi. Reprehenderit id pariatur voluptate occaecat. Laboris sunt ea adipisicing id esse proident veniam cupidatat nisi."
+            "Web application that displays a list of books. There are dashboard, latest, top picks, search and book details pages."
           }
           role={[
             "Consume and slicing data from API",
@@ -53,7 +53,7 @@ const Projects = () => {
           image={arita}
           title={"'Arita' - News App"}
           desc={
-            "Enim laboris enim ipsum pariatur veniam eu ullamco. In deserunt culpa ipsum veniam. Fugiat ad labore adipisicing tempor velit aute tempor excepteur do culpa sit esse deserunt aute."
+            "Web application that displays a list of news titles and their images from several news sources that can be accessed directly from the application."
           }
           role={[
             "Consume and slicing data from API",
