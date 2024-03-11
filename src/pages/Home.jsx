@@ -1,10 +1,14 @@
 import "../index.css";
 import foto from "../assets/foto-personal-web.png";
 import Navbar from "../components/Navbar";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
 const Home = () => {
+  const navigate = useNavigate();
+  const handleDirectLastProjectPage = () => navigate("/last-projects");
+  const handleDirectConnect = () => navigate("/");
+
   useEffect(() => {
     const noSelectElements = document.querySelectorAll(".no-select")
 
@@ -21,8 +25,8 @@ const Home = () => {
       <div className="flex md:flex-row justify-end flex-col items-center md:pt-0 pt-40">
         <img className="w-[10rem] h-[13rem] photo-small" alt="personal-small-screen" src={foto}/>
         <div className="flex px-20 md:pb-0 pb-6 md:text-left text-center md:text-xl text-lg md:pt-[5.7rem] pt-5 gap-5 md:justify-end justify-center">
-          <NavLink to={'/last-projects'} className="text-gray-700 blur-0 hover:text-orange-500 hover:blur-[1px] transition-all ease-in-out duration-300">Last Projects</NavLink>
-          <NavLink to={'/'} className="text-gray-700 blur-0 hover:text-orange-500 hover:blur-[1px] transition-all ease-in-out duration-300">Let&apos;s connect</NavLink>
+          <button onClick={() => setTimeout(handleDirectLastProjectPage, 500)} className="text-gray-700 blur-0 hover:text-orange-500 hover:blur-[1px] transition-all ease-in-out duration-300">Last Projects</button>
+          <button onClick={() => setTimeout(handleDirectConnect, 500)} className="text-gray-700 blur-0 hover:text-orange-500 hover:blur-[1px] transition-all ease-in-out duration-300">Let&apos;s connect</button>
         </div>
       </div>
       <div className="flex flex-row md:px-20 px-10">

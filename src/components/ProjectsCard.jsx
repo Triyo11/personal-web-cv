@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-import { NavLink } from "react-router-dom";
 
 const ProjectsCard = ({
   image,
@@ -11,6 +10,8 @@ const ProjectsCard = ({
   view,
   link,
 }) => {
+  const handleDirectProjectWebsite = () => window.location.replace(link)
+
   return (
     <div className="p-6 md:mx-32 mx-5 bg-gray-300 flex md:flex-row flex-col gap-4 rounded-2xl">
       <img
@@ -51,13 +52,13 @@ const ProjectsCard = ({
             ))}
           </ul>
         </div>
-        <NavLink
-          to={link}
+        <button
+          onClick={() => setTimeout(handleDirectProjectWebsite, 500)}
           target={"_blank"}
           className="p-2 mt-2 bg-gray-900 text-white max-w-max rounded-lg ring-2 ring-offset-4 ring-gray-900 ring-offset-gray-300 hover:ring-0 hover:ring-offset-0 hover:scale-110 hover:shadow-xl hover:shadow-black/50 transition-all ease-in-out duration-300"
         >
           Visit Website
-        </NavLink>
+        </button>
       </div>
     </div>
   );
