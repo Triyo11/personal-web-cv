@@ -42,7 +42,7 @@ const ProjectsCard = ({
         <p className="text-gray-900 font-semibold pt-3">View: </p>
         <ul className="flex gap-2 font-semibold">
           {view.map((item) => (
-            <li key={item} className="text-orange-500 p-1">
+            <li key={item} className="text-gray-900 p-1">
               {item}
             </li>
           ))}
@@ -50,7 +50,7 @@ const ProjectsCard = ({
         <NavLink
           to={link}
           target={"_blank"}
-          className="p-2 mt-2 bg-orange-500 text-white max-w-max rounded-lg hover:scale-110 hover:shadow-xl transition-all ease-in-out duration-300"
+          className="p-2 mt-2 bg-gray-900 text-white max-w-max rounded-lg ring-2 ring-offset-4 ring-gray-900 ring-offset-gray-300 hover:ring-0 hover:ring-offset-0 hover:scale-110 hover:shadow-xl hover:shadow-black/50 transition-all ease-in-out duration-300"
         >
           Visit Website
         </NavLink>
