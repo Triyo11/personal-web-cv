@@ -22,31 +22,35 @@ const ProjectsCard = ({
         <h2 className="md:text-2xl text-xl font-semibold text-gray-900">
           {title}
         </h2>
-        <p className="md:text-lg text-md text-justify leading-tight text-gray-700">
-          {desc}
-        </p>
-        <div className="pt-3">
-          <p className="text-gray-900 font-semibold">Role:</p>
-          <ul className="list-disc pl-[1.2rem] text-gray-900">
-            {role.map((item) => (
-              <li key={item}>{item}</li>
+        <div className="md:text-lg text-md">
+          <article className="text-pretty">
+            <p className="md:text-lg text-md leading-tight text-gray-900">
+              {desc}
+            </p>
+          </article>
+          <div className="pt-3">
+            <p className="text-gray-900 text-lg font-semibold">Role:</p>
+            <ul className="list-disc pl-[1.2rem] text-lg text-gray-900">
+              {role.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
+          <p className="text-gray-900 pt-3">
+            Date: <span>{date}</span>
+          </p>
+          <p className="text-gray-900 pt-3">
+            Tech stack: <span>{techs.join(", ")}</span>
+          </p>
+          <p className="text-gray-900 font-semibold pt-3">View: </p>
+          <ul className="flex gap-2 font-semibold">
+            {view.map((item) => (
+              <li key={item} className="text-gray-900 p-1">
+                {item}
+              </li>
             ))}
           </ul>
         </div>
-        <p className="text-gray-900 pt-3">
-          Date: <span>{date}</span>
-        </p>
-        <p className="text-gray-900 pt-3">
-          Tech stack: <span>{techs.join(", ")}</span>
-        </p>
-        <p className="text-gray-900 font-semibold pt-3">View: </p>
-        <ul className="flex gap-2 font-semibold">
-          {view.map((item) => (
-            <li key={item} className="text-gray-900 p-1">
-              {item}
-            </li>
-          ))}
-        </ul>
         <NavLink
           to={link}
           target={"_blank"}
