@@ -1,5 +1,25 @@
 import { GithubLogo, InstagramLogo, LinkedinLogo } from "@phosphor-icons/react/dist/ssr";
 
+const handleOpenResume = (e) => {
+  e.preventDefault();
+  window.open("https://drive.google.com/file/d/1gP8LmVcmJI_8dvzn6IEyYAWX87Jei_R1/view?usp=drive_link", "_blank");
+}
+
+const handleVisitIG = (e) => {
+  e.preventDefault();
+  window.open("https://www.instagram.com/triyo_11/", "_blank");
+}
+
+const handleVisitGithub = (e) => {
+  e.preventDefault();
+  window.open("https://github.com/Triyo11", "_blank");
+}
+
+const handleVisitLinkedIn = (e) => {
+  e.preventDefault();
+  window.open("https://www.linkedin.com/in/triyokrismantoro/", "_blank");
+}
+
 const Navbar = () => {
   return (  
     <div className="bg-[#E9E9E5] z-30 flex flex-wrap md:flex-row flex-col justify-between items-center fixed top-0 px-5 min-h-max w-full">
@@ -14,11 +34,11 @@ const Navbar = () => {
         </div>
       </div>
       <ul className="flex md:flex-row flex-col md:gap-0 gap-2 items-center">
-        <li><button className="download-cv text-lg">Download CV</button></li>
+        <li><button onClick={handleOpenResume} className="download-cv text-lg">Download CV</button></li>
         <ul className="flex items-center md:pr-0 pr-2">
-          <li><button className="navbar-contact"><InstagramLogo size={32} weight="fill"/></button></li>
-          <li><button className="navbar-contact"><GithubLogo size={30} weight="fill"/></button></li>
-          <li><button className="navbar-contact"><LinkedinLogo size={30} weight="fill"/></button></li>
+          <li><button onClick={handleVisitIG} className="navbar-contact"><InstagramLogo size={32} weight="fill"/></button></li>
+          <li><button onClick={handleVisitGithub} className="navbar-contact"><GithubLogo size={30} weight="fill"/></button></li>
+          <li><button onClick={handleVisitLinkedIn} className="navbar-contact"><LinkedinLogo size={30} weight="fill"/></button></li>
         </ul>
       </ul>
     </div>
