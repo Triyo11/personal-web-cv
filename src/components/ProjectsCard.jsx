@@ -21,14 +21,12 @@ const ProjectsCard = ({ image, title, desc, role, date, techs, view, link }) => 
         </div>
         <p className="text-gray-900 pt-3">Date: <span>{date}</span></p>
         <p className="text-gray-900 pt-3">Tech stack: <span>{techs.join(", ")}</span></p>
-        <p className="text-gray-900 font-semibold pt-3">View: <span>
-          <ul className="flex gap-2">
-            {view.map((item) => (
-              <li key={item} className="text-orange-500 p-1">{item}</li>
-            ))}
-          </ul>
-          </span>
-        </p>
+        <p className="text-gray-900 font-semibold pt-3">View: </p>
+        <ul className="flex gap-2 font-semibold">
+          {view.map((item) => (
+            <li key={item} className="text-orange-500 p-1">{item}</li>
+          ))}
+        </ul>
         <NavLink to={link} target={"_blank"} className="p-2 mt-2 bg-orange-500 text-white max-w-max rounded-lg">Visit Website</NavLink>
       </div>
     </div>
