@@ -36,9 +36,9 @@ const Navbar = () => {
       <ul className="flex md:flex-row flex-col md:gap-0 gap-2 items-center">
         <li><button onClick={handleOpenResume} className="download-cv text-lg">Download CV</button></li>
         <ul className="flex items-center md:pr-0 pr-2">
-          <li><button onClick={handleVisitIG} className="navbar-contact"><InstagramLogo size={32} weight="fill"/></button></li>
-          <li><button onClick={handleVisitGithub} className="navbar-contact"><GithubLogo size={30} weight="fill"/></button></li>
-          <li><button onClick={handleVisitLinkedIn} className="navbar-contact"><LinkedinLogo size={30} weight="fill"/></button></li>
+          <li><button onClick={handleVisitIG} className="navbar-contact" aria-label="Instagram"><InstagramLogo size={32} weight="fill"/></button></li>
+          <li><button onClick={handleVisitGithub} className="navbar-contact" aria-label="Github"><GithubLogo size={30} weight="fill"/></button></li>
+          <li><button onClick={handleVisitLinkedIn} className="navbar-contact" aria-label="Linkedin"><LinkedinLogo size={30} weight="fill"/></button></li>
         </ul>
       </ul>
     </div>
