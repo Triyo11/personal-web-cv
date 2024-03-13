@@ -2,7 +2,7 @@ import { GithubLogo, InstagramLogo, LinkedinLogo } from "@phosphor-icons/react/d
 
 const handleOpenResume = (e) => {
   e.preventDefault();
-  window.open("https://drive.google.com/file/d/13ZOCyfi2Y3BHAngZPEJil9bARB7QDbcj/view?usp=drive_link", "_blank");
+  window.open("https://drive.google.com/file/d/1-Vb9B8-fFdohL61S9g5C9TAskNS_dLoA/view?usp=drive_link", "_blank");
 }
 
 const handleVisitIG = (e) => {
