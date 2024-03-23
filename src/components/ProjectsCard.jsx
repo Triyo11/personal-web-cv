@@ -13,9 +13,9 @@ const ProjectsCard = ({
   const handleDirectProjectWebsite = () => window.location.replace(link)
 
   return (
-    <div className="p-6 md:mx-32 mx-5 bg-gray-300 flex md:flex-row flex-col gap-4 rounded-2xl">
+    <div className="p-6 md:mx-32 mx-5 bg-gray-300 grid md:grid-cols-2 grid-cols-1 gap-2 rounded-2xl">
       <img
-        className="md:w-[50%] w-full md:h-[17rem] h-[10rem] rounded-md"
+        className="md:w-[95%] w-full md:h-[80%] h-[10rem] rounded-md"
         alt="project-sample"
         src={image}
       />
@@ -30,8 +30,8 @@ const ProjectsCard = ({
             </p>
           </article>
           <div className="pt-3">
-            <p className="text-gray-900 text-lg font-semibold">Role:</p>
-            <ul className="list-disc pl-[1.2rem] text-lg text-gray-900">
+            <p className="text-gray-900 md:text-lg text-md font-semibold">Role:</p>
+            <ul className="list-disc pl-[1.2rem] md:text-lg text-md text-gray-900">
               {role.map((item) => (
                 <li key={item}>{item}</li>
               ))}
@@ -43,19 +43,21 @@ const ProjectsCard = ({
           <p className="text-gray-900 pt-3">
             Tech stack: <span>{techs.join(", ")}</span>
           </p>
-          <p className="text-gray-900 font-semibold pt-3">View: </p>
-          <ul className="flex gap-2 font-semibold">
-            {view.map((item) => (
-              <li key={item} className="text-gray-900 p-1">
-                {item}
-              </li>
-            ))}
-          </ul>
+          <div className="flex gap-2 items-center pt-3 font-semibold">
+            <p className="text-gray-900">View: </p>
+            <ul className="flex gap-1">
+              {view.map((item) => (
+                <li key={item} className="text-gray-900 p-1">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
         <button
           onClick={() => setTimeout(handleDirectProjectWebsite, 500)}
           target={"_blank"}
-          className="p-2 mt-2 bg-gray-900 text-white max-w-max rounded-lg ring-2 ring-offset-4 ring-gray-900 ring-offset-gray-300 hover:ring-0 hover:ring-offset-0 hover:scale-110 hover:shadow-xl hover:shadow-black/50 transition-all ease-in-out duration-300"
+          className="p-2 mt-2 bg-gray-900 text-white md:max-w-max w-full rounded-lg ring-2 ring-offset-4 ring-gray-900 ring-offset-gray-300 hover:ring-0 hover:ring-offset-0 hover:scale-110 hover:shadow-xl hover:shadow-black/50 transition-all ease-in-out duration-300"
         >
           Visit Website
         </button>

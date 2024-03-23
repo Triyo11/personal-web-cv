@@ -5,7 +5,7 @@ export const dataProjects = [
   {
     title: "'Bookoe' - Book App",
     image: bookoe,
-    desc: "Web application that displays a list of books. There are dashboard, latest, top picks, search and book details pages.",
+    desc: "Web application that displays a list of books. There are some pages like dashboard, latest, top picks, search and book details.",
     role: ["Consume and slicing data from API", "Implement design use React and TailwindCSS", "Handle route of web app"],
     date: "January 2024 - Now",
     techs: ["Node JS", "React JS", "TailwindCSS", "Express JS", "Vite JS"],
