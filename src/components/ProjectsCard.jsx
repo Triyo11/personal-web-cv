@@ -24,11 +24,9 @@ const ProjectsCard = ({
           {title}
         </h2>
         <div className="md:text-lg text-md">
-          <article className="text-pretty">
-            <p className="md:text-lg text-md leading-tight text-gray-900">
-              {desc}
-            </p>
-          </article>
+          <p className="md:text-lg text-md leading-tight text-justify text-gray-900">
+            {desc}
+          </p>
           <div className="pt-3">
             <p className="text-gray-900 md:text-lg text-md font-semibold">Role:</p>
             <ul className="list-disc pl-[1.2rem] md:text-lg text-md text-gray-900">
