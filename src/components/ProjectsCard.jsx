@@ -10,7 +10,7 @@ const ProjectsCard = ({
   view,
   link,
 }) => {
-  const handleDirectProjectWebsite = () => window.location.replace(link)
+  const handleDirectProjectWebsite = () => window.open(link, "_blank");
 
   return (
     <div className="p-6 md:mx-32 mx-5 bg-gray-300 grid md:grid-cols-2 grid-cols-1 gap-2 rounded-2xl">
@@ -56,7 +56,6 @@ const ProjectsCard = ({
         </div>
         <button
           onClick={() => setTimeout(handleDirectProjectWebsite, 500)}
-          target={"_blank"}
           className="p-2 mt-2 bg-gray-900 text-white md:max-w-max w-full rounded-lg ring-2 ring-offset-4 ring-gray-900 ring-offset-gray-300 hover:ring-0 hover:ring-offset-0 hover:scale-110 hover:shadow-xl hover:shadow-black/50 transition-all ease-in-out duration-300"
         >
           Visit Website
